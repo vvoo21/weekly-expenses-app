@@ -4,10 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webpack boilerplate</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/budget.png">
+    <title>Weekly Expenses</title>
 </head>
 <body>
-  <h1>Hello webpack!</h1>
-  <img src="images/hi.png" alt="sync icon" width="40" height="40">
+  <header>
+    <h1>Weekly Expenses</h1>
+  </header>
+  <main class="container">
+    <section class="form-section">
+      <h2>Add your expenses here</h2>
+      <form action="#" id="form">
+        <label for="expense">Expense:</label>
+        <input type="text" name="expense" class="form-control" id="expense" placeholder="Expense name" aria-label="expense">
+        <label for="amount">Amount</label>
+        <input type="text" name="amount" class="form-control" id="amount" placeholder="Amount in $" aria-label="amount">
+        <button class="btn" type="submit">Add</button>
+      </form>
+    </section>
+    <section class="list-section">
+      <h2>List</h2>
+      <div class="expenses-list">
+        <ul class="list-group"></ul>
+      </div>
+      <div class="budget">
+        <div class="budget-alert">
+          <p>Budget: $ <span id="total"></span> </p>
+        </div>
+        <div class="remaining-alert">
+          <p>Remaining budget: $ <span id="remaining"></span> </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>Coded by <a href="https://github.com/vvoo21/weekly-expenses">Vanessa Oliveros</a></p>
+  </footer>
 </body>
 </html>
