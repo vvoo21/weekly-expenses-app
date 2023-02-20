@@ -10,7 +10,8 @@ const askBudget = () => {
     }
   
     budget = new Budget(userBudget);
-
+  
+    UI.addBudget(budget);
   };
   
   export default askBudget;
