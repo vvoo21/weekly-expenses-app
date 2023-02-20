@@ -5,5 +5,5 @@ class Budget {
     this.expenses = [];
   }
 }
-  
+
 export default Budget;
