@@ -1,4 +1,5 @@
 import Budget from './Budget.js';
+import UI from './UI.js';
 
 let budget;
 
