@@ -1,13 +1,7 @@
-import _ from 'lodash';
 import './style.css';
 
-function component() {
-  const element = document.createElement('div');
+const form = document.querySelector('#form');
 
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Enjoy', 'this', 'Webpack', 'boilerplate'], ' ');
+document.addEventListener('DOMContentLoaded', askBudget);
 
-  return element;
-}
-
-document.body.appendChild(component());
+form.addEventListener('submit', addExpense);
