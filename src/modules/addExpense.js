@@ -11,6 +11,9 @@ const addExpense = (e) => {
   } else if (amount <= 0 || Number.isNaN(amount)) {
     UI.printAlert('Invalid amount', 'error');
   }
+
+  const expense = { name, amount, id: Date.now() };
+  
 };
 
 export default addExpense;
