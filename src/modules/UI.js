@@ -1,4 +1,4 @@
-import { formSection, listGroup } from '../index.js';
+import { formSection, listGroup } from './variables.js';
 
 class UI {
   static addBudget(amount) {
@@ -28,7 +28,7 @@ class UI {
   static addExpenseList(expenses) {
     this.cleanHTML();
 
-    expenses.forEach(expense => {
+    expenses.forEach((expense) => {
       const { name, amount, id } = expense;
 
       const newExpense = document.createElement('li');
@@ -47,14 +47,12 @@ class UI {
       btnDelete.textContent = 'Delete x';
       newExpense.appendChild(btnDelete);
 
-
       listGroup.appendChild(newExpense);
-
     });
   }
 
   static cleanHTML() {
-    while(listGroup.firstChild) {
+    while (listGroup.firstChild) {
       listGroup.removeChild(listGroup.firstChild);
     }
   }
