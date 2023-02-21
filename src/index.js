@@ -1,13 +1,10 @@
-import _ from 'lodash';
 import './style.css';
+import askBudget from './modules/askBudget.js';
+import addExpense from './modules/addExpense.js';
 
-function component() {
-  const element = document.createElement('div');
+const form = document.querySelector('#form');
+const askBudgetForm = document.querySelector('#ask-budget-form');
 
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Enjoy', 'this', 'Webpack', 'boilerplate'], ' ');
+askBudgetForm.addEventListener('submit', askBudget);
 
-  return element;
-}
-
-document.body.appendChild(component());
+form.addEventListener('submit', addExpense);
