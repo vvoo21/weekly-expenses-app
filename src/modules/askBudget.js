@@ -16,7 +16,7 @@ const askBudget = (e) => {
     setTimeout(() => {
       divMessage.remove();
     }, 1000);
-    return
+    return;
   }
 
   budget = new Budget(userBudget);
