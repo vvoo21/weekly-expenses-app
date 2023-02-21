@@ -1,5 +1,6 @@
 import Budget from './Budget.js';
 import UI from './UI.js';
+import { askBudgetSection } from '../index.js';
 
 export let budget;
 
@@ -12,7 +13,7 @@ const askBudget = (e) => {
     const divMessage = document.createElement('div');
     divMessage.classList.add('alert');
     divMessage.textContent = 'Invalid amount';
-    document.querySelector('.ask-budget-section').appendChild(divMessage);
+    askBudgetSection.appendChild(divMessage);
     setTimeout(() => {
       divMessage.remove();
     }, 1000);
@@ -23,7 +24,7 @@ const askBudget = (e) => {
 
   UI.addBudget(budget);
 
-  document.querySelector('.ask-budget-section').style.display = 'none';
+  askBudgetSection.style.display = 'none';
 };
 
 export default askBudget;
