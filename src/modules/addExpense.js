@@ -1,5 +1,6 @@
 import UI from './UI.js';
 import { budget } from './askBudget.js';
+import { form } from '../index.js';
 
 const addExpense = (e) => {
   e.preventDefault();
@@ -16,6 +17,10 @@ const addExpense = (e) => {
   const expense = { name, amount, id: Date.now() };
 
   budget.newExpense(expense);
+
+  UI.printAlert('Expense added correctly');
+
+  form.reset();
 };
 
 export default addExpense;
