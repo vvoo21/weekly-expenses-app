@@ -1,4 +1,5 @@
 import UI from './UI.js';
+import { budget } from './askBudget.js';
 
 const addExpense = (e) => {
   e.preventDefault();
@@ -13,7 +14,8 @@ const addExpense = (e) => {
   }
 
   const expense = { name, amount, id: Date.now() };
-  
+
+  budget.newExpense(expense);
 };
 
 export default addExpense;

@@ -1,7 +1,7 @@
 import Budget from './Budget.js';
 import UI from './UI.js';
 
-let budget;
+export let budget;
 
 const askBudget = (e) => {
   e.preventDefault();
