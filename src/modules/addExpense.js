@@ -20,6 +20,9 @@ const addExpense = (e) => {
 
   UI.printAlert('Expense added correctly');
 
+  const { expenses } = budget;
+  UI.addExpenseList(expenses);
+
   form.reset();
 };
 
