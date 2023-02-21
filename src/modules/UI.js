@@ -1,4 +1,4 @@
-const formSection = document.querySelector('.form-section');
+import { formSection, listGroup } from './variables.js';
 
 class UI {
   static addBudget(amount) {
@@ -23,6 +23,38 @@ class UI {
     setTimeout(() => {
       divMessage.remove();
     }, 2000);
+  }
+
+  static addExpenseList(expenses) {
+    this.cleanHTML();
+
+    expenses.forEach((expense) => {
+      const { name, amount, id } = expense;
+
+      const newExpense = document.createElement('li');
+      newExpense.id = id;
+
+      const nameExpense = document.createElement('p');
+      nameExpense.textContent = name;
+      newExpense.appendChild(nameExpense);
+
+      const spanAmount = document.createElement('span');
+      spanAmount.textContent = amount;
+      newExpense.appendChild(spanAmount);
+
+      const btnDelete = document.createElement('button');
+      btnDelete.setAttribute('type', 'button');
+      btnDelete.textContent = 'Delete x';
+      newExpense.appendChild(btnDelete);
+
+      listGroup.appendChild(newExpense);
+    });
+  }
+
+  static cleanHTML() {
+    while (listGroup.firstChild) {
+      listGroup.removeChild(listGroup.firstChild);
+    }
   }
 }
 

@@ -1,9 +1,6 @@
 import './style.css';
-import askBudget from './modules/askBudget.js';
-import addExpense from './modules/addExpense.js';
-
-const form = document.querySelector('#form');
-const askBudgetForm = document.querySelector('#ask-budget-form');
+import askBudget, { addExpense } from './modules/functions.js';
+import { askBudgetForm, form } from './modules/variables.js';
 
 askBudgetForm.addEventListener('submit', askBudget);
 
