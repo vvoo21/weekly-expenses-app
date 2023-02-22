@@ -1,4 +1,5 @@
 import { formSection, listGroup } from './variables.js';
+import { deleteExpenses } from './functions.js';
 
 class UI {
   static addBudget(amount) {
