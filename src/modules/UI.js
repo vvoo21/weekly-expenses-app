@@ -39,7 +39,7 @@ class UI {
       newExpense.appendChild(nameExpense);
 
       const spanAmount = document.createElement('span');
-      spanAmount.textContent = amount;
+      spanAmount.textContent = `$ ${amount}`;
       newExpense.appendChild(spanAmount);
 
       const btnDelete = document.createElement('button');
@@ -55,6 +55,10 @@ class UI {
     while (listGroup.firstChild) {
       listGroup.removeChild(listGroup.firstChild);
     }
+  }
+
+  static updateRemaining(remaining) {
+    document.querySelector('#remaining').textContent = remaining;
   }
 }
 
