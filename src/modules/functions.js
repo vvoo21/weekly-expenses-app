@@ -55,4 +55,13 @@ export const addExpense = (e) => {
   form.reset();
 };
 
+export const deleteExpenses = (id) => {
+  budget.deleteExpenses(id);
+
+  const { expenses, remaining } = budget;
+  UI.addExpenseList(expenses);
+
+  UI.updateRemaining(remaining);
+}
+
 export default askBudget;
