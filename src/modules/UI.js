@@ -1,4 +1,7 @@
 import { formSection, listGroup } from './variables.js';
+/* eslint-disable */
+import { deleteExpenses } from './functions.js';
+/* eslint-disable */
 
 class UI {
   static addBudget(amount) {
@@ -39,12 +42,15 @@ class UI {
       newExpense.appendChild(nameExpense);
 
       const spanAmount = document.createElement('span');
-      spanAmount.textContent = amount;
+      spanAmount.textContent = `$ ${amount}`;
       newExpense.appendChild(spanAmount);
 
       const btnDelete = document.createElement('button');
       btnDelete.setAttribute('type', 'button');
       btnDelete.textContent = 'Delete x';
+      btnDelete.onclick = () => {
+        deleteExpenses(id);
+      };
       newExpense.appendChild(btnDelete);
 
       listGroup.appendChild(newExpense);
@@ -55,6 +61,10 @@ class UI {
     while (listGroup.firstChild) {
       listGroup.removeChild(listGroup.firstChild);
     }
+  }
+
+  static updateRemaining(remaining) {
+    document.querySelector('#remaining').textContent = remaining;
   }
 }
 

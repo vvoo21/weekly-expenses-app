@@ -1,5 +1,7 @@
 import Budget from './Budget.js';
+/* eslint-disable */
 import UI from './UI.js';
+/* eslint-disable */
 import { askBudgetSection, form } from './variables.js';
 
 let budget;
@@ -45,10 +47,22 @@ export const addExpense = (e) => {
 
   UI.printAlert('Expense added correctly');
 
-  const { expenses } = budget;
+  const { expenses, remaining } = budget;
+
   UI.addExpenseList(expenses);
 
+  UI.updateRemaining(remaining);
+
   form.reset();
+};
+
+export const deleteExpenses = (id) => {
+  budget.deleteExpenses(id);
+
+  const { expenses, remaining } = budget;
+  UI.addExpenseList(expenses);
+
+  UI.updateRemaining(remaining);
 };
 
 export default askBudget;
