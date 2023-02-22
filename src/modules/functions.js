@@ -45,8 +45,12 @@ export const addExpense = (e) => {
 
   UI.printAlert('Expense added correctly');
 
-  const { expenses } = budget;
+  const { expenses, remaining } = budget;
+
   UI.addExpenseList(expenses);
+
+  UI.updateRemaining(remaining);
+
 
   form.reset();
 };
