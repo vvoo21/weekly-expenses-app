@@ -16,6 +16,10 @@ class Budget {
 
     this.remaining = this.budget - spent;
   }
+
+  deleteExpenses(id) {
+    this.expenses = this.expenses.filter(expenses => expenses.id !== id);
+  }
 }
 
 export default Budget;
