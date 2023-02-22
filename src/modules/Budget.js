@@ -19,6 +19,7 @@ class Budget {
 
   deleteExpenses(id) {
     this.expenses = this.expenses.filter(expenses => expenses.id !== id);
+    this.calculateRemaining();
   }
 }
 
