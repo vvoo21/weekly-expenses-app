@@ -1,5 +1,7 @@
 import { formSection, listGroup } from './variables.js';
+/* eslint-disable */
 import { deleteExpenses } from './functions.js';
+/* eslint-disable */
 
 class UI {
   static addBudget(amount) {

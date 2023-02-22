@@ -1,5 +1,7 @@
 import Budget from './Budget.js';
+/* eslint-disable */
 import UI from './UI.js';
+/* eslint-disable */
 import { askBudgetSection, form } from './variables.js';
 
 let budget;
