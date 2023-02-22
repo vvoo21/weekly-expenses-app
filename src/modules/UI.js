@@ -45,6 +45,9 @@ class UI {
       const btnDelete = document.createElement('button');
       btnDelete.setAttribute('type', 'button');
       btnDelete.textContent = 'Delete x';
+      btnDelete.onclick = () => {
+        deleteExpenses(id);
+      }
       newExpense.appendChild(btnDelete);
 
       listGroup.appendChild(newExpense);
