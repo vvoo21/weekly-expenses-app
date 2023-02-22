@@ -51,7 +51,6 @@ export const addExpense = (e) => {
 
   UI.updateRemaining(remaining);
 
-
   form.reset();
 };
 
@@ -62,6 +61,6 @@ export const deleteExpenses = (id) => {
   UI.addExpenseList(expenses);
 
   UI.updateRemaining(remaining);
-}
+};
 
 export default askBudget;

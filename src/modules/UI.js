@@ -48,7 +48,7 @@ class UI {
       btnDelete.textContent = 'Delete x';
       btnDelete.onclick = () => {
         deleteExpenses(id);
-      }
+      };
       newExpense.appendChild(btnDelete);
 
       listGroup.appendChild(newExpense);
