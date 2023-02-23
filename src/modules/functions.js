@@ -37,8 +37,10 @@ export const addExpense = (e) => {
 
   if (name === '' || amount === '') {
     UI.printAlert('Both fields are required', 'error');
+    return;
   } else if (amount <= 0 || Number.isNaN(amount)) {
     UI.printAlert('Invalid amount', 'error');
+    return;
   }
 
   const expense = { name, amount, id: Date.now() };
@@ -52,6 +54,8 @@ export const addExpense = (e) => {
   UI.addExpenseList(expenses);
 
   UI.updateRemaining(remaining);
+
+  UI.checkBudget(remaining);
 
   form.reset();
 };

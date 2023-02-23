@@ -8,44 +8,59 @@
     <title>Weekly Expenses</title>
 <script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script></head>
 <body>
-  <header>
-    <h1>Weekly Expenses</h1>
+  <header class="flex header-footer">
+    <div class="divider"></div>
+    <h1 class="primary-text white-text">Weekly Expenses</h1>
   </header>
-  <main class="container">
-    <section class="ask-budget-section">
-      <form action="#" id="ask-budget-form">
-        <label for="budget">What is your budget?</label>
-        <input type="text" name="ask-budget" id="ask-budget" aria-label="ask-budget">
-        <button id="ask-budget-btn" type="submit" >Add</button>
+  <main class="container flex-column">
+    <section class="flex ask-budget-section">
+      <div class="welcome-message flex-column">
+        <img src="images/budget.png" alt="budget-icon" width="115" height="115">
+        <h2 class="primary-text white-text">Weekly Expenses</h2>
+        <p class="paragraph white-text">Divide your weekly budget between needs, wants, savings, and debt payments, using this incredible application.</p>
+        <span class="white-text">let's get started!</span>
+      </div>
+      <form action="#" class="flex-column" id="ask-budget-form">
+        <label for="budget">What is your budget for this week?</label>
+        <input type="text" name="ask-budget" id="ask-budget" class="inputs" aria-label="ask-budget" placeholder="Enter your budget">
+        <button id="ask-budget-btn" class="btn" type="submit" >Add</button>
       </form>
     </section>
-    <section class="form-section">
-      <h2>Add your expenses here</h2>
-      <form action="#" id="form">
-        <label for="expense">Expense:</label>
-        <input type="text" name="expense" class="form-control" id="expense" placeholder="Expense name" aria-label="expense">
-        <label for="amount">Amount</label>
-        <input type="text" name="amount" class="form-control" id="amount" placeholder="Amount in $" aria-label="amount">
+    <section class="primary-budget-info">
+      <div class="budget flex">
+        <div class="budget-alert">
+          <p class="budget-remaining">Budget</p>
+          <span id="total"></span>
+        </div>
+        <div class="remaining-alert">
+          <p class="budget-remaining">Remaining budget</p>
+          <span id="remaining"></span>
+        </div>
+      </div>
+    </section>
+    <section class="flex-column form-section">
+      <h2 class="title">Add your expenses here</h2>
+      <form action="#" id="form" class="flex-column">
+        <div class="flex expense-amount-div">
+          <img src="images/expenses.png" alt="expenses-icon" width="40" height="40">
+          <input type="text" name="expense" class="expense-amount inputs" id="expense" placeholder="Expense name" aria-label="expense">
+        </div>
+        <div class="flex expense-amount-div">
+          <img src="images/gross.png" alt="amount-icon" width="40" height="40">
+          <input type="text" name="amount" class="expense-amount inputs" id="amount" placeholder="Amount in $" aria-label="amount">
+        </div>
         <button class="btn" type="submit">Add</button>
       </form>
     </section>
-    <section class="list-section">
-      <h2>List</h2>
+    <section class="flex-column list-section">
+      <h2 class="title">List</h2>
       <div class="expenses-list">
-        <ul class="list-group"></ul>
-      </div>
-      <div class="budget">
-        <div class="budget-alert">
-          <p>Budget: $ <span id="total"></span> </p>
-        </div>
-        <div class="remaining-alert">
-          <p>Remaining budget: $ <span id="remaining"></span> </p>
-        </div>
+        <ul class="list-group flex-column"></ul>
       </div>
     </section>
   </main>
-  <footer>
-    <p>Coded by <a href="https://github.com/vvoo21/weekly-expenses">Vanessa Oliveros</a></p>
+  <footer class="header-footer">
+    <p class="white-text">Coded by <a class="white-text" href="https://github.com/vvoo21/weekly-expenses">Vanessa Oliveros</a></p>
   </footer>
 </body>
 </html>
