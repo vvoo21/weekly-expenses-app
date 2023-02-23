@@ -36,16 +36,16 @@ class UI {
 
       const newExpense = document.createElement('li');
       newExpense.id = id;
-      newExpense.classList.add('flex', 'list', 'inputs');
+      newExpense.classList.add('flex', 'list');
 
       const nameExpense = document.createElement('p');
-      nameExpense.textContent = name;
-      nameExpense.classList.add('name-expense');
+      nameExpense.textContent = `◇ ${name}`;
+      nameExpense.classList.add('span-name-amount');
       newExpense.appendChild(nameExpense);
 
       const spanAmount = document.createElement('span');
       spanAmount.textContent = `$ ${amount}`;
-      spanAmount.classList.add('span-amount', 'white-text');
+      spanAmount.classList.add('span-name-amount');
       newExpense.appendChild(spanAmount);
 
       const btnDelete = document.createElement('button');
@@ -71,11 +71,15 @@ class UI {
     document.querySelector('#remaining').textContent = remaining;
   }
 
-  static checkBudget(remaining) {
+  static checkBudget(budgetObj) {
+    const { remaining } = budgetObj;
 
     if(remaining <= 0) {
       UI.printAlert('Your budget has been exhausted', 'error');
       form.querySelector('button[type="submit"]').disabled = true;
+      return
+    } else {
+      form.querySelector('button[type="submit"]').disabled = false;
     }
   }
 }

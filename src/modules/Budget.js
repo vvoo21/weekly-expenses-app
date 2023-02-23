@@ -7,7 +7,6 @@ class Budget {
 
   newExpense(expense) {
     this.expenses = [...this.expenses, expense];
-
     this.calculateRemaining();
   }
 
