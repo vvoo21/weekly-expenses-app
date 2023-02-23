@@ -66,8 +66,8 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.567);
+  backdrop-filter: blur(20px);
   overflow: auto;
   gap: 2rem;
   padding: 50px 24px;
