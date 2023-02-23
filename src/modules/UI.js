@@ -1,4 +1,4 @@
-import { formSection, listGroup } from './variables.js';
+import { form, listGroup } from './variables.js';
 /* eslint-disable */
 import { deleteExpenses } from './functions.js';
 /* eslint-disable */
@@ -6,22 +6,22 @@ import { deleteExpenses } from './functions.js';
 class UI {
   static addBudget(amount) {
     const { budget, remaining } = amount;
-    document.querySelector('#total').textContent = budget;
-    document.querySelector('#remaining').textContent = remaining;
+    document.querySelector('#total').textContent = `$${budget}`;
+    document.querySelector('#remaining').textContent = `$${remaining}`;
   }
 
   static printAlert(message, type) {
     const divMessage = document.createElement('div');
-    divMessage.classList.add('alert');
+    divMessage.classList.add('alert-success');
 
     if (type === 'error') {
-      divMessage.classList.add('error');
+      divMessage.classList.add('alert');
     } else {
       divMessage.classList.add('success');
     }
 
     divMessage.textContent = message;
-    formSection.insertBefore(divMessage, formSection.children[1]);
+    form.appendChild(divMessage);
 
     setTimeout(() => {
       divMessage.remove();
@@ -36,18 +36,22 @@ class UI {
 
       const newExpense = document.createElement('li');
       newExpense.id = id;
+      newExpense.classList.add('flex', 'list', 'inputs');
 
       const nameExpense = document.createElement('p');
       nameExpense.textContent = name;
+      nameExpense.classList.add('name-expense');
       newExpense.appendChild(nameExpense);
 
       const spanAmount = document.createElement('span');
       spanAmount.textContent = `$ ${amount}`;
+      spanAmount.classList.add('span-amount', 'white-text');
       newExpense.appendChild(spanAmount);
 
       const btnDelete = document.createElement('button');
       btnDelete.setAttribute('type', 'button');
-      btnDelete.textContent = 'Delete x';
+      btnDelete.classList.add('btn-red');
+      btnDelete.textContent = 'X';
       btnDelete.onclick = () => {
         deleteExpenses(id);
       };
