@@ -16,6 +16,8 @@ This project will allow us to create a list of the expenses that we can have in 
 
 ![Desktop Version](./src/images/desktop-version.png)
 
+![Mobile Version](./src/images/mobile-version.png)
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
