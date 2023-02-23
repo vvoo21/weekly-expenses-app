@@ -243,7 +243,7 @@ footer {
 
   .form-section {
     grid-area: form-section;
-    max-height: 250px;
+    max-height: 350px;
   }
 
   .list-section {
