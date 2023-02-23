@@ -55,6 +55,8 @@ export const addExpense = (e) => {
 
   UI.updateRemaining(remaining);
 
+  UI.checkBudget(remaining);
+
   form.reset();
 };
 

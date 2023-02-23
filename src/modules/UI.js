@@ -70,6 +70,14 @@ class UI {
   static updateRemaining(remaining) {
     document.querySelector('#remaining').textContent = remaining;
   }
+
+  static checkBudget(remaining) {
+
+    if(remaining <= 0) {
+      UI.printAlert('Your budget has been exhausted', 'error');
+      form.querySelector('button[type="submit"]').disabled = true;
+    }
+  }
 }
 
 export default UI;
