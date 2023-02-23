@@ -5,7 +5,7 @@
   --white: hsl(0, 0%, 100%);
   --grey: hsl(0, 1%, 31%);
   --lightgrey: hsl(216, 7%, 86%);
-  --darkBlue: #28304d;
+  --darkBlue: hsl(227, 32%, 23%);
   --yellow: #f7e454;
 }
 
@@ -14,7 +14,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-  list-style: none;
 }
 
 body {
@@ -66,8 +65,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.567);
-  backdrop-filter: blur(20px);
+  background-color: var(--darkBlue);
   overflow: auto;
   gap: 2rem;
   padding: 50px 24px;
@@ -107,12 +105,13 @@ header {
 }
 
 #ask-budget-form label {
-  color: var(--grey);
+  color: var(--darkBlue);
+  font-weight: bold;
 }
 
 .inputs {
   padding: 0.5rem;
-  border: 1px solid var(--lightgrey);
+  border: none;
   border-radius: 8px;
   outline: none;
 }
@@ -129,7 +128,6 @@ header {
 .alert {
   color: var(--white);
   width: 100%;
-  max-width: 500px;
   margin-bottom: 10px;
   padding: 0.5rem;
   border-radius: 8px;
@@ -140,7 +138,6 @@ header {
 .success {
   color: var(--white);
   width: 100%;
-  max-width: 500px;
   margin-bottom: 10px;
   padding: 0.5rem;
   border-radius: 8px;
@@ -189,32 +186,27 @@ header {
 .list-group {
   max-height: 500px;
   overflow-y: auto;
+  background-color: var(--white);
+  border-radius: 8px;
 }
 
 .list {
   justify-content: space-between;
-  background-color: var(--white);
+  padding: 10px;
 }
 
 .btn-red {
-  color: var(--white);
+  color: red;
+  font-size: 20px;
   font-weight: bold;
-  background: red;
-  border-radius: 50%;
+  background: transparent;
   border: none;
-  width: 26px;
 }
 
-.span-amount {
-  background: var(--blue);
-  padding: 2px 5px;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-.name-expense {
+.span-name-amount {
   color: var(--darkBlue);
   font-weight: bold;
+  font-size: 17px;
 }
 
 footer {
@@ -247,5 +239,9 @@ footer {
 
   .list-section {
     grid-area: list-section;
+  }
+
+  .title {
+    font-size: 26px;
   }
 }
