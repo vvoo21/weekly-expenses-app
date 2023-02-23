@@ -5,5 +5,3 @@ import { askBudgetForm, form } from './modules/variables.js';
 askBudgetForm.addEventListener('submit', askBudget);
 
 form.addEventListener('submit', addExpense);
-
-export const hola = 'hol';

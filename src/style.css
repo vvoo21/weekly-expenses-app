@@ -27,7 +27,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 0.5rem
+  gap: 0.5rem;
 }
 
 .flex {
@@ -153,8 +153,8 @@ header {
 }
 
 .budget-remaining {
- color: var(--lightgrey);
- font-size: 18px;
+  color: var(--lightgrey);
+  font-size: 18px;
 }
 
 #total,
@@ -180,7 +180,7 @@ header {
 
 .expense-amount-div {
   gap: 1rem;
-} 
+}
 
 .expense-amount {
   width: 100%;
@@ -218,7 +218,7 @@ header {
 }
 
 footer {
-  border-top: 1px solid var(--lightgrey);  
+  border-top: 1px solid var(--lightgrey);
 }
 
 /* Desktop design */
@@ -230,12 +230,11 @@ footer {
 
   .container {
     display: grid;
-    grid-template: 
-            "primary-budget-info primary-budget-info" auto
-            "form-section list-section" auto / 1fr 1fr;
+    grid-template:
+      "primary-budget-info primary-budget-info" auto
+      "form-section list-section" auto / 1fr 1fr;
     gap: 30px;
   }
-
 
   .primary-budget-info {
     grid-area: primary-budget-info;
